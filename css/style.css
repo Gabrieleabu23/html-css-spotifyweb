@@ -106,7 +106,9 @@ a{
     padding: 10px 20px;
     height: 100%;
 }
-
+#side_bar ul.grey_text_side-bar:last-child a{
+    padding: 5px 0px;
+}
 
 #side_bar .col a{
     padding: 10px 0px;
