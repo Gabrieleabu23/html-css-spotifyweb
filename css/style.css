@@ -202,7 +202,9 @@ a{
     /* height: 150px;
     background-color: red; */
 }
-
+.no_view{
+    display: inline;
+}
 
 /* 
     mobile version 480px
@@ -210,11 +212,14 @@ a{
 
 
 @media all and (max-width:480px) {
-    .no_view{
+    #side_bar .no_view{
         display: none;
     }
+    .logo{
+        display: block;
+    }
     #side_bar{
-        width: 70px;
+        width: 80px;
     }
     #main-content{
         width: calc(100vw - 50px);
@@ -222,8 +227,9 @@ a{
     #layover{
         width: calc(100% - 50px);
     }
-    #side_bar .image img{
-        width: 30px;
+    #side_bar .image img,
+    #side_bar img{
+        width: 45px;
     }
     #download{
         border-bottom: 0px;
