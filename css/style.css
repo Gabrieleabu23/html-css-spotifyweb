@@ -12,7 +12,7 @@
     display: flex;
     height: calc(100vh - 100px);
     /* DEBUG */
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
 }
 #side_bar{
     width: 250px;
@@ -78,6 +78,9 @@ a{
     border-radius: 50px;
 }
 
+.gray_central_text{
+    color: #717478;
+}
 #main-content .width_6.col{
     width: calc((100%/6) - 20px);
 }
@@ -158,8 +161,9 @@ a{
     font-size: 25px;
 }
 #download{
-    margin-top: auto;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
     padding: 10px 0px;
     border-bottom: 1px solid #646363;
 }
@@ -167,14 +171,14 @@ a{
 #user span{
     vertical-align: top;
 }
-#download i{
-    font-size: 20px;
+#download img{
+    width: 15%;
     margin-right: 10px;
 }
 #user{
     line-height: 30px;
-    justify-self: flex-end;
     padding-top: 20px;
+    font-size: 20px;
 }
 #user span{
     padding-left: 10px;
@@ -202,6 +206,13 @@ a{
 }
 .central .image{
     width: 100%;
+}
+.central h2{
+    font-size: 25px;
+}
+.central h5{
+    padding: 20px 0px;
+    font-size: 15px;
 }
 .image img{
     width: 100%;
@@ -253,15 +264,20 @@ a{
     #layover div{
         padding-right: 40px;
     }
-    #side_bar .image img,
-    #side_bar img{
+    #side_bar .image img{
         width: 45px;
     }
+    #side_bar a{
+        width: 200px;
+    }
     #download{
+        width: 40px;
+        padding: 0px 5px;
         border-bottom: 0px;
     }
-    #download i{
-        padding-left: 5px;
+    #download img{
+        width: 100%;
+        
     }
 
     /* MAIN-CONTENT */
