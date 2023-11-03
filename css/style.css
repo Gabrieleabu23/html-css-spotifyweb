@@ -8,13 +8,15 @@
 }
 /* CLASSI E ID PRINCIPALI - CONTENITORI */
 #main_container{
-    height: calc(100vh - 100px);
     display: flex;
 }
 #side_bar{
-    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 30px 20px 20px;
     min-width: 250px;
-    height: 100%;
+    height: calc(100vh - 100px);
     /* DEBUG */
     background-color: black;
 }
@@ -33,7 +35,33 @@
 li{
     list-style-type: none;
 }
-/* CLASSI MAIN CONTENT */
+a{
+    text-decoration: none;
+}
+#home > span,
+#user > span{
+    color: white;
+    font-weight: 700;
+}
+/* CLASSI USO UNIVERSALE */
+.radius_img{
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* COLORI TESTO FONT AWESOME*/
+#side_bar .fa-solid.fa-plus{
+    color: black;
+}
+/* COLORI TESTO E GRANDEZZA   */
+.grey_text_side-bar{
+    color: #4a4a4a;
+}
+.grey_text_side-bar li span{
+    color: #4a4a4a;
+}
+
+/* CLASSI SIDEBAR CONTENT */
 
 .image{
     width: 80%;
@@ -44,6 +72,9 @@ li{
     gap: 20px;
     margin-bottom: 20px;
 }
+#side_bar ul:nth-child(2){
+    margin-top: 20px;
+}
 #side_bar i{
     width: 20%;
     color: white;
@@ -51,10 +82,49 @@ li{
     /* vertical-align: bottom; */
 }
 
-
-/* #side_bar li{
-    padding: 10px 0px;
-} */
-#side_bar li:first-child{
+#side_bar ul:first-child li{
     padding-top: 40px;
+}
+
+.square_plus{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-color: #a3a3a3;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+#side_bar .square_plus i{
+    width: 100%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    font-size: 25px;
+}
+#download{
+    margin-top: auto;
+    font-size: 18px;
+    padding: 10px 0px;
+    border-bottom: 1px solid #646363;
+}
+#download span,
+#user span{
+    vertical-align: top;
+}
+#download i{
+    font-size: 20px;
+}
+#user{
+    line-height: 30px;
+    justify-self: flex-end;
+    padding-top: 20px;
+}
+#user span{
+    padding-left: 10px;
+}
+#user img.radius_img{
+    width: 30px;
+    height: 30px;
+    background-color: #868686;
 }
