@@ -26,7 +26,8 @@
                         <img class="logo" src="img/logo-small.svg" alt="">
                     </div>
                     <ul class="grey_text_side-bar">
-                        <li><a href="#" id="home"><img src="img/home.svg" alt=""><span class="no_view">Home</span></a></li>
+                        <li><a href="#" id="home">
+                            <span></span><img src="img/home.svg" alt=""><span class="no_view">Home</span></a></li>
                         <li><a href=""><img src="img/search.svg" alt=""><span class="no_view">Cerca</span></a></li>
                         <li><a href=""><img src="img/libreria.svg" alt=""><span class="no_view">La tua libreria</span></a></li>
                     </ul>
@@ -68,7 +69,7 @@
             </div>
             <div class="container">
                 <ul>
-                    <li><a href="#">IN EVIDENZA</a></li>
+                    <li><a href="#">IN EVIDENZA</a><span></span></li>
                     <li><a href="#">PODCAST</a></li>
                     <li><a href="#">CLASSIFICHE</a></li>
                     <li><a href="#">GENERI E MOOD</a></li>
@@ -85,7 +86,7 @@
                         </div>
                         <div class="text">
                             <h3>Heavy Metal</h3>
-                            <span>Subtitle</span>
+                            <span class="gray_central_text">Subtitle</span>
                         </div>
                     </div>
                     <div class="col">
@@ -94,7 +95,7 @@
                         </div>
                         <div class="text">
                             <h3>Stranger Things, Vol.1 &lpar;a Netflix Original Series Soundtrack&rpar;</h3>
-                            <span>Kyle Dixon & Micheal Stein</span>
+                            <span class="gray_central_text">Kyle Dixon & Micheal Stein</span>
                         </div>
                     </div>
                     <div class="col">
@@ -103,7 +104,7 @@
                         </div>
                         <div class="text">
                             <h3>A quiet place</h3>
-                            <span>Subtitle</span>
+                            <span class="gray_central_text">Subtitle</span>
                         </div>
                     </div>
                     <div class="col">
@@ -112,7 +113,7 @@
                         </div>
                         <div class="text">
                             <h3>Split</h3>
-                            <span>Subtitle</span>
+                            <span class="gray_central_text">Subtitle</span>
                         </div>
                     </div>
                     <div class="col">
@@ -121,7 +122,7 @@
                         </div>
                         <div class="text">
                             <h3>A cure for wellness</h3>
-                            <span>Subtitle</span>
+                            <span class="gray_central_text">Subtitle</span>
                         </div>
                     </div>
                     <div class="col">
@@ -130,7 +131,7 @@
                         </div>
                         <div class="text">
                             <h3>Sinister</h3>
-                            <span>Subtitle</span>
+                            <span class="gray_central_text">Subtitle</span>
                         </div>
                     </div>
                 </div>
@@ -186,8 +187,10 @@
                         <img src="img/sinister.jpeg" alt="">
                         <div><h6>Sinister</h6>
                         Brano nome</div>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-regular fa-folder"></i>
+                        <div>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-folder"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
@@ -200,11 +203,20 @@
                             <i class="fa-solid fa-rotate-right"></i>
                         </div>
                         <div class="progress_bar">
+                            <span><input type="range" min="0" max="100" step="1" name="" id="" class="bar"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="content" id="volume">
+                        <i class="fa-solid fa-list"></i>
+                        <i class="fa-solid fa-display"></i>
+                        <i class="fa-solid fa-volume-high"></i>
+                        <div class="progress_bar">
                             <input type="range" min="0" max="100" step="1" name="" id="" class="bar">
                         </div>
                     </div>
                 </div>
-                <div class="col"></div>
             </div>
         </div>
     </div>

@@ -15,6 +15,7 @@
     /* background-color: rebeccapurple; */
 }
 #side_bar{
+    position: relative;
     width: 250px;
     padding: 0px 30px 10px 0px;
     height: 100%;
@@ -22,6 +23,14 @@
     background-color: black;
 
 }
+#home > span:nth-child(1) {
+    position: absolute;
+    background: #b7fa31;
+    width: 5px;
+    height: 40px;
+    left: 0px;
+  }
+  
 
 #last_col{
     margin-top: auto;
@@ -219,10 +228,26 @@ a{
 .text{
     text-align: center;
 }
+.text h3{
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 0px;
+}
+.text span{
+    font-size: 12px;
+}
 .container{
     width: 60%;
     margin: 0 auto;
 }
+div.container:nth-child(2) > ul:nth-child(1) > li:nth-child(1) > span:nth-child(2) {
+    width: 30px;
+    height: 3px;
+    background: #b7fa31;
+    display: block;
+    margin: 5px auto;
+  }
+  
 .central{
     width: 100%;
     padding: 30px 50px 100px 20px;
@@ -234,6 +259,7 @@ a{
 }
 #main-content .col{
     width: calc(100% / 6);
+    padding: 10px 0px;
 }
 .no_view{
     display: inline;
@@ -256,60 +282,80 @@ a{
     width: 100%;
     /* DEBUG */
     /* background-color: green; */
-    height: 100px;
+    height: 100%;
 }
-#player .col{
-    width: calc(100%/3);
-    /* DEBUG */
-    /* border: 1px solid black; */
-    /* background-color: violet; */
-    height: 100px;
+
+#player .col:nth-of-type(2){
+    width: calc(100vw/2);
 }
-#player .content#song{
+#player .content#song,
+#player .content#volume{
     flex-direction: row;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
+
+  
+.content#song div:nth-of-type(2) {
+    display: flex;
+    gap: 20px;
+}   
 #player .content{
+    width: 100%;
     color: black;
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 #player .content img{
     width: 50px;
 }
 #player #comands{
+    width: 100%;
     display: flex;
    justify-content: center;
    align-items: center;
    gap: 40px;
    padding-top: 10px;
+   font-size: 20px;
 }
 .fa-circle-play{
-    font-size: 30px;
+    font-size: 40px;
 }
+
 .progress_bar{
-    margin: 0 auto;
     width: 100%;
 }
 #player .bar{
-    width: 100%;
-    -webkit-appearance: none;
-    background: transparent;
-}
-
-.bar {
-    width: 400px;
+    width: calc(100% - 100px);
     height: 5px;
     -webkit-appearance: none;
     background: #111;
     outline: none;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
-  }
+    box-shadow: inset 0 0 5px #5b5b5b;
+}
+#player .content#volume .bar{
+    width: 100%;
+}
+
+.progress_bar span:before,
+.progress_bar input::before,
+.progress_bar span::after,
+.progress_bar input::after{
+    content: "0:25";
+    font-size: 12px;
+    /* color: red; */
+    padding: 10px 20px 0px 0px;
+    vertical-align: bottom;
+}
+.progress_bar span::after,
+.progress_bar input::after{
+    padding: 10px 0px 0px 20px;
+}
+
 .bar::-webkit-slider-thumb,
 .bar::-moz-range-thumb{
     -webkit-appearance: none;
@@ -341,6 +387,12 @@ a{
     }
     #main-content{
         width: calc(100vw - 50px);
+    }
+    .text h3{
+        font-size: 15px;
+    }
+    .text span{
+        font-size: 12px;
     }
     #layover{
         width: calc(100% - 50px);
@@ -388,6 +440,39 @@ a{
     #main-content .width_6.col{
         width: calc(50% - 10px);
     }
+    #player .row{
+        width: 100%;
+    }
+    #player .col{
+        width: calc(100%/3);
+    }
+    .bar{
+        width: 100%;
+    }
+    /* PLAYER */
+    
+#player .content img {
+    width: 30px;
+  }
+  
+  #song > div:nth-child(2) {
+    font-size: 12px;
+  }
+
+  #song > div:nth-child(3) {
+    flex-wrap: wrap;
+  }
+  #song {
+    gap: 10px;
+  }
+  #comands {
+    gap: 20px;
+    font-size: 15px;
+  }
+  #volume {
+    gap: 10px;
+  }
+  
 }
 
 
@@ -420,6 +505,30 @@ a{
     #main-content .width_6.col{
         width: calc(50% - 10px);
     }
+    .text h3 {
+        font-size: 20px;
+    }
+    .text span {
+        font-size: 15px;
+    }
+  
+    #player .row{
+        gap: 10px;
+    }
+    .player .col{
+        width: 30%;
+    }
+    #player .col:nth-of-type(2){
+        width: calc(100%/2);
+    }
+    #player #comands{
+        font-size: 20px;
+    }
+    .fa-circle-play{
+        font-size: 40px;
+    }
+
+    
  }  
 
 /* 
@@ -448,6 +557,18 @@ a{
     }
     #main-content .width_6.col{
         width: calc(100%/4);
+    }
+    .text h3{
+        font-size: 18px;
+    }
+    .text span{
+        font-size: 15px;
+    }
+    #player .col{
+        width: 25%;
+    }
+    #player .col:nth-of-type(2){
+        width: 40%;
     }
 }
 
