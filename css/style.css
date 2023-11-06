@@ -471,6 +471,7 @@ div.container:nth-child(2) > ul:nth-child(1) > li a {
 
 .progress_bar span::after,
 .progress_bar input::after {
+    content: "4:35";
     padding: 10px 0px 0px 20px;
 }
 
