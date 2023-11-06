@@ -264,10 +264,6 @@ ul.grey_text_side-bar:nth-child(1) > li:nth-child(2):hover> div+span {
     font-size: 12px;
 }
 
-.central .image {
-    width: 100%;
-}
-
 .central h2 {
     font-size: 25px;
 }
@@ -276,10 +272,35 @@ ul.grey_text_side-bar:nth-child(1) > li:nth-child(2):hover> div+span {
     padding: 20px 0px;
     font-size: 15px;
 }
-
-.image img {
+.image{
+    width: 100%;
+    position: relative;
+}
+.image img{
     width: 100%;
 }
+.layover_col{
+    opacity: 0;
+    width: 100%;
+    height: 98%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0, 0, 0.6);
+    color: white;
+}
+.layover_col i{
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.image:hover > .layover_col{
+    opacity: 1;
+    transition: all 0.5s ease-in;
+}
+
 
 .text {
     text-align: center;
