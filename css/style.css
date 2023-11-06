@@ -49,6 +49,7 @@
 }
 
 #layover {
+    z-index: 500;
     width: calc(100% - 250px);
     height: 100px;
     position: fixed;
