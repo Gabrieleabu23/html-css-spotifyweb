@@ -494,7 +494,10 @@ div.container:nth-child(2) > ul:nth-child(1) > li a {
     box-shadow: -410px 0 0 400px #b7fa31;
 }
 
-
+#layover div:hover{
+    scale: 120%;
+    padding-right: 40px;
+}
 
 /* 
     mobile version 480px
